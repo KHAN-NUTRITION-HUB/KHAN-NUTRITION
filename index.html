@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHAN NUTRITION HUB // Premium Supplement Hub</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Premium Supplement Particle Background -->
+    <div class="premium-bg-animation">
+        <div class="orb entry-1"></div>
+        <div class="orb entry-2"></div>
+        <div class="orb entry-3"></div>
+    </div>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="https://www.instagram.com/khanfitnessgym/profilecard/?igsh=MXg2enVmcWt5cWJ1Yg%3D%3D&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacvBAQJhBOrfpTcJrJzOlFasKaj63nGHwlciQeLVinzGmTuZqQ15uO-_7b1jg_aem_GHnvQWYUP80lrznL2DkZDw" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @khan_fitness1234</a>
+            <a href="https://wa.me/916005447821" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> 6005447821</a>
+            <a href="tel:+916005447821"><i class="fas fa-phone-alt"></i> Call Us</a>
+            <a href="mailto:support@khanfitness.com"><i class="far fa-envelope"></i> Email</a>
+        </div>
+        <div class="top-bar-right">
+            <span>⚡ 100% AUTHENTIC SUPPLEMENTS DIRECT FROM IMPORTERS</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">KHAN<span>-NUTRITION-HUB</span></a>
+            
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Supplements Store</a>
+                <a href="#brands" class="nav-link">Elite Brands</a>
+                <a href="#services" class="nav-link">Our Promise</a>
+                <a href="#footer" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button id="cart-btn" class="cart-trigger" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button id="menu-toggle" class="hamburger" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">KHAN<span>FITNESS</span></div>
+            <button id="drawer-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="drawer-body">
+            <nav class="mobile-nav">
+                <a href="#home" class="drawer-link">Home</a>
+                <div class="drawer-divider">Catalog</div>
+                <a href="#products" class="drawer-link">All Premium Supplements</a>
+                <div class="drawer-divider">Support & Verification</div>
+                <a href="https://wa.me/916005447821" class="drawer-link" target="_blank">Track Order via WhatsApp</a>
+                <a href="tel:+916005447821" class="drawer-link">Help Center Desk</a>
+                <a href="#footer" class="drawer-link">Contact Store</a>
+            </nav>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- Interactive Search System Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-close" id="search-close"><i class="fas fa-times"></i></button>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search dynamic stack, proteins, brands...">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Luxury Shopping Bag Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>Your Selection (<span class="cart-count">0</span>)</h3>
+            <button id="cart-sidebar-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-sidebar-items" id="cart-sidebar-items">
+            <div class="empty-cart-message">Your selection is currently empty.</div>
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-total-row">
+                <span>Total Value</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="checkout-btn btn btn-primary" onclick="checkoutEntireCartViaWhatsApp()">Order Entire Bag Via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Hero Showcase Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content observe-fade">
+            <span class="hero-tagline">SCIENTIFICALLY FORMULATED ELITE NUTRITION</span>
+            <h1 class="hero-title">Premium Supplements<br>For Serious Athletes</h1>
+            <p class="hero-subtitle">100% Genuine Products | Fast Delivery Matrix | Guaranteed Best Rates</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Elite Catalog</a>
+                <a href="https://wa.me/916005447821" target="_blank" rel="noopener" class="btn btn-secondary">Consult Expert</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Infinite Auto Marquee Brands Bar -->
+    <section id="brands" class="brands-section">
+        <div class="brands-slider">
+            <div class="brands-track">
+                <span>Optimum Nutrition</span><span>MuscleBlaze</span><span>Avvatar</span><span>Nutrabay</span><span>GNC</span><span>Kevin Levrone</span><span>Rule1</span><span>Dymatize</span><span>MyProtein</span><span>MuscleTech</span>
+                <span>Optimum Nutrition</span><span>MuscleBlaze</span><span>Avvatar</span><span>Nutrabay</span><span>GNC</span><span>Kevin Levrone</span><span>Rule1</span><span>Dymatize</span><span>MyProtein</span><span>MuscleTech</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Central Unified Products Section -->
+    <section id="products" class="products-section">
+        <div class="section-container">
+            <div class="section-header observe-fade">
+                <h2 class="section-title">The Complete Premium Lineup</h2>
+                <p class="section-subtitle">No confusion. No hidden profiles. Just pure laboratory certified results inside one premium matrix.</p>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Data dynamically populated via database matrix script -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Infrastructure System -->
+    <section id="services" class="services-section">
+        <div class="section-container grid-4">
+            <div class="service-card observe-slide">
+                <div class="service-icon"><i class="fas fa-certificate"></i></div>
+                <h3>100% Genuine</h3>
+                <p>Direct verification and authentication codes with zero middle channels.</p>
+            </div>
+            <div class="service-card observe-slide">
+                <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
+                <h3>WhatsApp Deals</h3>
+                <p>Direct chat configuration with instant personal dealing parameters.</p>
+            </div>
+            <div class="service-card observe-slide">
+                <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
+                <h3>Fast Delivery</h3>
+                <p>Expedited processing vectors to ensure prompt execution timelines.</p>
+            </div>
+            <div class="service-card observe-slide">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <h3>Personal Support</h3>
+                <p>Direct communication pipeline access with our expert fitness panel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Module -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header observe-fade">
+                <h2 class="section-title">Verified Athlete Reviews</h2>
+            </div>
+            <div class="testimonials-slider-container observe-fade">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">"The direct interaction structure via WhatsApp makes transactions incredibly fast. Got authentic product verification in minutes."</p>
+                        <h4 class="reviewer-name">Rahul Sharma — Advanced Powerlifter</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">"Premium mixability parameters and phenomenal taste. Khan Fitness delivers absolute authenticity every single time."</p>
+                        <h4 class="reviewer-name">Vikram Singh — Fitness Coach</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subsystem -->
+    <section class="newsletter-section">
+        <div class="section-container newsletter-box observe-fade">
+            <h2>Join Our Elite Roster</h2>
+            <p>Subscribe to receive instant updates on newly arrived international allocations.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Verification tracking protocol linked.');">
+                <input type="email" placeholder="Enter your email address..." required>
+                <button type="submit" class="btn btn-primary">Secure Access</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Premium Footer Network Matrix -->
+    <footer id="footer" class="main-footer">
+        <div class="section-container footer-grid">
+            <div class="footer-brand-col">
+                <a href="#" class="logo">KHAN<span>FITNESS</span></a>
+                <p class="footer-desc">Building ultimate elite physical statures with authenticated clinical supplements row matrices.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/khan_fitness1234" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/916005447821" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+916005447821" aria-label="Call Now"><i class="fas fa-phone-alt"></i></a>
+                    <a href="mailto:support@khanfitness.com" aria-label="Email Address"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Quick Access</h4>
+                <ul>
+                    <li><a href="#home">Home Base</a></li>
+                    <li><a href="#products">Supplements Store</a></li>
+                    <li><a href="#brands">Partner Brands</a></li>
+                    <li><a href="#services">Our Promise</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="https://wa.me/916005447821">Shipping Rates Query</a></li>
+                    <li><a href="https://wa.me/916005447821">Replacement Verification</a></li>
+                    <li><a href="#">Privacy Protocols</a></li>
+                    <li><a href="#">Terms & Systems Matrix</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 KHAN FITNESS. Formulated For Supreme Genetic Output. Powered By Genuine Verification.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Hot action Elements -->
+    <div class="floating-actions-container">
+        <a href="https://wa.me/916005447821" target="_blank" rel="noopener" class="float-btn whatsapp-float" aria-label="WhatsApp Deal Chat"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+916005447821" class="float-btn phone-float" aria-label="Call Executive Desk"><i class="fas fa-phone-alt"></i></a>
+        <button id="back-to-top" class="float-btn top-float" aria-label="Scroll to Top Top"><i class="fas fa-chevron-up"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
