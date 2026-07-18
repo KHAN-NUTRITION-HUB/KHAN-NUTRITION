@@ -904,4 +904,16 @@ body {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+}/* Mobile responsive code */
+@media (max-width: 768px) {
+    .your-container-class { /* .your-container-class ki jagah apne main container ka class name likho */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px; /* Cards ke beech ka gap mobile ke hisab se */
+        padding: 10px;
+    }
+    
+    .product-title-class { /* Agar text fir bhi kate toh font size thoda chota karne ke liye */
+        font-size: 14px;
+        white-space: normal; /* Taaki text niche wali line me aa jaye, cut na ho */
+    }
 }
