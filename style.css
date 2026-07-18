@@ -923,4 +923,73 @@ body {
         font-size: 11px !important;
         padding: 6px 0 !important;
     }
+}/* --- Mobile Responsive Fix (Place at the end of your CSS file) --- */
+
+@media (max-width: 600px) {
+  
+  /* 1. Main Grid: Cards ke liye margin banata hai taaki screen edges se space mile */
+  .container, .products-container { 
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+  }
+
+  /* 2. Products Grid: 2-column layout ensure karta hai narrow spacing ke saath */
+  #products-grid, .products-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important; /* 2 Columns on mobile */
+      gap: 10px !important; /* Narrower gap for mobile */
+      width: calc(100% - 20px) !important; /* Accounting for container padding */
+      margin: 0 auto !important;
+  }
+
+  /* 3. Individual Product Card: Iski overall size narrow screen pe fix karta hai */
+  .product-card {
+      max-width: none !important;
+      width: 100% !important; /* Fills its grid cell */
+      margin: 0 !important;
+      box-sizing: border-box !important;
+  }
+
+  /* 4. Large Product Images Fix: Inhe cards ke andar bounds karta hai */
+  .product-card img, 
+  .product-image img, 
+  [class*="product-card"] img {
+      width: 100% !important;
+      max-height: 180px !important; /* Images bohot badi nahi hongi */
+      object-fit: contain !important; /* Purfectly fit for rectangular bottles/jars */
+      display: block !important;
+      margin: 0 auto !important; /* Center horizontally */
+  }
+
+  /* 5. Star Ratings Fix: Size choti karta hai narrow screens ke liye */
+  .ratings {
+      font-size: 14px !important;
+  }
+
+  /* 6. Pricing Text Fix: Size compact rakhta hai */
+  .price {
+      font-size: 16px !important;
+  }
+  .old-price {
+      font-size: 12px !important;
+  }
+
+  /* 7. Button Container: Buttons ko tightly pack karta hai narrow width ke liye */
+  .button-container {
+      display: flex !important;
+      flex-direction: column !important; /* Stack vertically for space */
+      gap: 5px !important;
+      width: 100% !important;
+  }
+
+  /* 8. Buttons Fix: Text cutne se rokta hai minimum spacing aur font sizing se */
+  .btn, button, [class*="btn"] {
+      width: 100% !important;
+      font-size: 12px !important; /* Smashed narrow font */
+      padding: 6px 0 !important; /* Tighter padding for horizontal space */
+      margin: 0 !important;
+      letter-spacing: normal !important; /* Tight text */
+      box-sizing: border-box !important;
+  }
+
 }
